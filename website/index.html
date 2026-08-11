@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azure DevOps Server</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;min-height:100vh;background:linear-gradient(135deg,#0f172a,#1d4ed8);color:white}
+.container{width:min(1100px,92%);margin:auto;padding:35px 0}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 25px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:18px}
+.logo{font-size:22px;font-weight:bold}
+.status{background:#16a34a;padding:8px 15px;border-radius:30px;font-size:14px;font-weight:bold}
+.hero{text-align:center;padding:75px 20px 55px}
+.icon{font-size:70px;margin-bottom:15px}
+h1{font-size:clamp(40px,7vw,70px);margin-bottom:15px}
+.hero p{color:#dbeafe;font-size:19px;line-height:1.7;max-width:700px;margin:auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:28px;border-radius:18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15)}
+.emoji{font-size:35px;margin-bottom:15px}
+.card h3{margin-bottom:10px;font-size:20px}
+.card p{color:#dbeafe;line-height:1.6}
+.tech{margin-top:30px;padding:30px;text-align:center;border-radius:18px;background:rgba(255,255,255,.08)}
+.tech span{display:inline-block;margin:7px;padding:10px 16px;border-radius:25px;background:rgba(255,255,255,.12);color:#e0f2fe}
+footer{text-align:center;padding:35px 10px 10px;color:#bfdbfe;font-size:14px}
+@media(max-width:750px){.cards{grid-template-columns:1fr}header{flex-direction:column;gap:12px}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div class="logo">☁️ Azure DevOps Server</div>
+<div class="status">● ONLINE</div>
+</header>
+
+<section class="hero">
+<div class="icon">🚀</div>
+<h1>Welcome to Azure VM</h1>
+<p>This website is running on an Azure Virtual Machine powered by Nginx and deployed automatically using Terraform.</p>
+</section>
+
+<section class="cards">
+<div class="card"><div class="emoji">☁️</div><h3>Microsoft Azure</h3><p>Cloud infrastructure running on an Azure Virtual Machine.</p></div>
+<div class="card"><div class="emoji">⚙️</div><h3>Terraform</h3><p>Infrastructure provisioned automatically using Infrastructure as Code.</p></div>
+<div class="card"><div class="emoji">🌐</div><h3>Nginx</h3><p>High-performance web server serving this application over HTTP.</p></div>
+</section>
+
+<section class="tech">
+<h2>Technology Stack</h2>
+<br>
+<span>Azure VM</span><span>Terraform</span><span>Nginx</span><span>Ubuntu</span><span>Linux</span><span>DevOps</span>
+</section>
+
+<footer>Deployed with Terraform • Running on Nginx • Azure Cloud</footer>
+</div>
+</body>
+</html>
