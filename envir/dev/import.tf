@@ -20,3 +20,14 @@ import {
 
   id = "/subscriptions/a60bfb4b-160f-44e7-979b-775bdd787c90/resourceGroups/rg-paratp/providers/Microsoft.Network/virtualNetworks/vnet/subnets/subnet_frontend"
 }
+import {
+  to = module.main.azurerm_network_interface.nic["vms1"]
+
+  id = "/subscriptions/a60bfb4b-160f-44e7-979b-775bdd787c90/resourceGroups/rg-paratp/providers/Microsoft.Network/networkInterfaces/nic_1"
+}
+
+import {
+  to = module.main.azurerm_network_security_group.nsg["vms1"]
+
+  id = "/subscriptions/a60bfb4b-160f-44e7-979b-775bdd787c90/resourceGroups/rg-paratp/providers/Microsoft.Network/networkSecurityGroups/frontend-nsg"
+}
