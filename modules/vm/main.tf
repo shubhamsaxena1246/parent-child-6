@@ -84,17 +84,7 @@ resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
   network_interface_id      = azurerm_network_interface.nic[each.key].id
   network_security_group_id = azurerm_network_security_group.nsg[each.key].id
 }
-resource "null_resource" "deployment_initiate" {
-  triggers = {
-    always_run = timestamp()
 
-  }
-  provisioner "local-exec" {
-  interpreter = ["PowerShell", "-Command"]
-
-  command = "Write-Output 'deployment started at ${timestamp()}' | Out-File 'deployment-${replace(timestamp(), ":", "-")}.log'"
-}
-}
 
 resource "azurerm_virtual_machine" "main" {
   for_each = var.vms
@@ -134,38 +124,7 @@ resource "azurerm_virtual_machine" "main" {
   tags = {
     environment = "staging"
   }
- provisioner "file" {
-  source      = "C:/Terraform/parent-child-module-3/website/index.html"
-  destination = "/tmp/index.html"
-
-  connection {
-    type     = "ssh"
-    user     = "testadmin"
-    password = "Password1234!"
-    host     = data.azurerm_public_ip.example[each.key].ip_address
-  }
-}
-
-provisioner "remote-exec" {
-  inline = [
-    "sudo apt-get update -y",
-    "sudo apt-get install -y nginx",
-    "sudo systemctl enable nginx",
-    "sudo systemctl start nginx",
-    "sudo cp /tmp/index.html /var/www/html/index.html",
-    "sudo chown www-data:www-data /var/www/html/index.html",
-    "sudo chmod 644 /var/www/html/index.html",
-    "sudo systemctl restart nginx"
-  ]
-
-  connection {
-    type     = "ssh"
-    user     = "testadmin"
-    password = "Password1234!"
-    host     = data.azurerm_public_ip.example[each.key].ip_address
-  }
-}
-}
+ 
 
 # Outputs
 output "vm_public_ip" {
