@@ -43,7 +43,7 @@ resource "azurerm_network_security_group" "nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "22"
-    source_address_prefix     = "*"
+    source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
 
@@ -92,8 +92,8 @@ resource "azurerm_virtual_machine" "main" {
 
   os_profile {
     computer_name  = "hostname"
-    admin_username = "testadmin"
-    admin_password = "Password1234!"
+    admin_username = each.value.admin_username
+    admin_password = each.value.admin_password
   }
 
   os_profile_linux_config {
