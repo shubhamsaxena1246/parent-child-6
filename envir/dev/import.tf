@@ -36,3 +36,8 @@ import {
 
   id = "/subscriptions/a60bfb4b-160f-44e7-979b-775bdd787c90/resourceGroups/rg-paratp/providers/Microsoft.Network/networkInterfaces/nic_1|/subscriptions/a60bfb4b-160f-44e7-979b-775bdd787c90/resourceGroups/rg-paratp/providers/Microsoft.Network/networkSecurityGroups/frontend-nsg"
 }
+import {
+  to = module.main.azurerm_virtual_machine.main["vms1"]
+
+  id = "/subscriptions/a60bfb4b-160f-44e7-979b-775bdd787c90/resourceGroups/rg-paratp/providers/Microsoft.Compute/virtualMachines/Fronetend_Vm"
+}
