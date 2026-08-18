@@ -40,6 +40,8 @@ vms = {
     nic_name             = "nic_1"
     vm_name              = "Fronetend_Vm"
     nsg_name             = "frontend-nsg"
+    admin_username = "testadmin"
+    admin_password = "Password1234!"
   }
 }
 
