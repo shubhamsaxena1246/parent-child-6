@@ -15,3 +15,8 @@ import {
 
   id = "/subscriptions/a60bfb4b-160f-44e7-979b-775bdd787c90/resourceGroups/rg-paratp/providers/Microsoft.Network/virtualNetworks/vnet"
 }
+import {
+  to = module.snet.azurerm_subnet.snet["snet1"]
+
+  id = "/subscriptions/a60bfb4b-160f-44e7-979b-775bdd787c90/resourceGroups/rg-paratp/providers/Microsoft.Network/virtualNetworks/vnet/subnets/subnet_frontend"
+}
